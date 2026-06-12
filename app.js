@@ -1024,7 +1024,10 @@ const TOOLS = [
 ];
 
 // ─── STATE ───────────────────────────────────────────────────
-let lang = localStorage.getItem('ai_tools_lang') || 'en';
+// Detect language from URL path (/en/ = English) or HTML lang attribute
+let lang = window.location.pathname.startsWith('/en') ? 'en'
+         : document.documentElement.lang === 'en' ? 'en'
+         : localStorage.getItem('ai_tools_lang') || 'zh';
 let activeCategory = 'all';
 let activePricing = 'all';
 let searchQuery = '';
@@ -1255,13 +1258,13 @@ function setupEvents() {
     renderTools();
   });
 
-  // Language toggle
+  // Language toggle → navigate to other language
   langToggle.addEventListener('click', () => {
-    lang = lang === 'en' ? 'zh' : 'en';
-    localStorage.setItem('ai_tools_lang', lang);
-    applyI18N();
-    renderCategories();
-    renderTools();
+    if (lang === 'en') {
+      window.location.href = '/';
+    } else {
+      window.location.href = '/en/';
+    }
   });
 
   // Category clicks — sidebar
@@ -1292,11 +1295,12 @@ function setupEvents() {
     renderTools();
   });
 
-  // Card click → modal
+  // Card click → tool detail page
   toolsGrid.addEventListener('click', (e) => {
     const card = e.target.closest('.tool-card');
     if (!card) return;
-    openModal(card.dataset.id);
+    const langPrefix = lang === 'en' ? 'en/' : '';
+    window.location.href = `/${langPrefix}tool/${card.dataset.id}.html`;
   });
 
   // Modal close
