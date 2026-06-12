@@ -566,3 +566,120 @@ a:hover { text-decoration: underline; }
   .logo-text { display: none; }
   .tools-grid { grid-template-columns: 1fr; }
 }
+
+/* ========== TOOL DETAIL PAGE ========== */
+.tool-detail {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+.tool-detail-back {
+  margin-bottom: 1rem;
+}
+.tool-detail-back a {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.tool-detail-back a:hover {
+  text-decoration: underline;
+}
+.tool-detail-card {
+  background: var(--gray-50);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--gray-200);
+}
+.tool-detail-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.tool-detail-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+.tool-detail-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+.tool-detail-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.modal-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--blue-light);
+  color: var(--blue);
+}
+.modal-pricing {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.tool-detail-desc {
+  color: var(--gray-600);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.tool-detail-features {
+  margin-bottom: 2rem;
+}
+.tool-detail-features h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--gray-800);
+}
+.tool-detail-features ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+.tool-detail-features li {
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+}
+.tool-detail-features li::before {
+  content: "✓ ";
+  color: var(--green);
+  font-weight: 700;
+}
+.modal-visit-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.modal-visit-btn:hover {
+  background: var(--blue-dark);
+}
+
+@media (max-width: 640px) {
+  .tool-detail { padding: 0 1rem; margin: 1rem auto; }
+  .tool-detail-card { padding: 1.25rem; }
+  .tool-detail-header h1 { font-size: 1.3rem; }
+  .tool-detail-features ul { grid-template-columns: 1fr; }
+}
