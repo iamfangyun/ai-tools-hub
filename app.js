@@ -1021,6 +1021,21 @@ const TOOLS = [
     popular: 60,
     date: '2023-04-01',
   },
+  {
+    id: 'roblox-gui-maker',
+    name: 'Roblox GUI Maker',
+    name_zh: 'Roblox GUI Maker',
+    icon: '🎮',
+    category: 'code',
+    pricing: 'free',
+    description: 'Free AI-assisted Roblox Studio GUI planner for ScreenGui layouts, HUDs, menus, and Lua UI starter code.',
+    description_zh: '免费的 AI Roblox Studio GUI 规划工具，可生成 ScreenGui 布局、HUD 菜单和 Lua UI 起步代码建议。',
+    features: ['Roblox ScreenGui planning', 'HUD and menu layout ideas', 'Lua UI starter-code guidance', 'JSON-style UI blueprints'],
+    features_zh: ['Roblox ScreenGui 规划', 'HUD 和菜单布局思路', 'Lua UI 起步代码建议', 'JSON 风格界面蓝图'],
+    url: 'https://robloxguimaker.dev/',
+    popular: 58,
+    date: '2026-06-18',
+  },
 ];
 
 // ─── STATE ───────────────────────────────────────────────────
