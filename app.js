@@ -93,6 +93,21 @@ const CATEGORIES = [
 // ─── TOOLS DATA (placeholder — replace with real data) ──────
 const TOOLS = [
   {
+    id: 'auferet',
+    name: 'Auferet',
+    name_zh: 'Auferet',
+    icon: '🎲',
+    category: 'writing',
+    pricing: 'freemium',
+    description: 'Free AI RPG with a game master that remembers your world. Upload your own lore for persistent memory, play 5e and Pathfinder 2e with dice and stat tracking, solo or with friends, in the browser or on Android.',
+    description_zh: '免费 AI 角色扮演游戏，AI 游戏主持人能记住你的世界。上传自定义设定获得持久记忆，支持 5e 与 Pathfinder 2e、骰子与数值追踪，可单人或多人，支持网页与安卓端。',
+    features: ['Persistent memory (Event & Character Library)', 'Upload your own lore', '5e and Pathfinder 2e modes', 'Dice and stat tracking', 'Solo or multiplayer'],
+    features_zh: ['持久记忆（事件库与角色库）', '上传自定义设定', '5e 与 Pathfinder 2e 模式', '骰子与数值追踪', '单人或多人游玩'],
+    url: 'https://auferet.com',
+    popular: 30,
+    date: '2026-06-24',
+  },
+  {
     id: 'chatgpt',
     name: 'ChatGPT',
     name_zh: 'ChatGPT',
